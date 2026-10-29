@@ -8,7 +8,7 @@
     :root{--ink:#111322;--muted:#5d6275;--line:#e4e5ed;--bg:#f7f7fb;--violet:#6951ff;--dark:#15162a}
     *{box-sizing:border-box} body{margin:0;color:var(--ink);background:var(--bg);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
     main{max-width:1080px;margin:auto;padding:28px 28px 90px} nav{display:flex;justify-content:space-between;align-items:center;font-weight:720}.eyebrow{color:var(--violet);font-size:.77rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-    .hero{padding:110px 0 78px;max-width:810px} h1{margin:13px 0 22px;font-size:clamp(3.1rem,8vw,6.5rem);line-height:.96;letter-spacing:-.07em}h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.045em;line-height:1.05}p{color:var(--muted);font-size:1.12rem}.cta{display:inline-block;padding:14px 21px;border-radius:12px;background:var(--violet);color:#fff;font-weight:740;text-decoration:none;box-shadow:0 10px 24px #6951ff33}.fine{font-size:.9rem;margin-top:12px}.panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{border-top:3px solid var(--violet)}.step b{display:block;color:var(--violet);font-size:.8rem;margin-bottom:16px}.dark{margin:82px 0;padding:48px;border-radius:24px;background:var(--dark);color:#fff}.dark p{color:#c7cada}.dark .cta{background:#fff;color:var(--dark);box-shadow:none}ul{margin:16px 0;padding-left:20px;color:var(--muted)}.price{font-size:2.7rem;font-weight:800;letter-spacing:-.06em;color:var(--ink)}.audit{margin:40px 0 72px}.audit .grid{margin-top:26px}.audit .panel{min-height:210px}.how{margin:24px 0 82px}.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}.how .panel{min-height:205px}.case-study{margin:24px 0 82px}.case-study .grid{margin-top:26px}.case-study h3{margin-bottom:6px}.faq{margin:24px 0 82px}.faq .grid{margin-top:26px}.faq .panel{min-height:190px}@media(max-width:720px){.grid,.how-grid{grid-template-columns:1fr}.hero{padding:72px 0}.dark{padding:28px}}
+    .hero{padding:110px 0 78px;max-width:810px} h1{margin:13px 0 22px;font-size:clamp(3.1rem,8vw,6.5rem);line-height:.96;letter-spacing:-.07em}h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.045em;line-height:1.05}p{color:var(--muted);font-size:1.12rem}.cta{display:inline-block;padding:14px 21px;border-radius:12px;background:var(--violet);color:#fff;font-weight:740;text-decoration:none;box-shadow:0 10px 24px #6951ff33}.fine{font-size:.9rem;margin-top:12px}.panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{border-top:3px solid var(--violet)}.step b{display:block;color:var(--violet);font-size:.8rem;margin-bottom:16px}.dark{margin:82px 0;padding:48px;border-radius:24px;background:var(--dark);color:#fff}.dark p{color:#c7cada}.dark .cta{background:#fff;color:var(--dark);box-shadow:none}ul{margin:16px 0;padding-left:20px;color:var(--muted)}.price{font-size:2.7rem;font-weight:800;letter-spacing:-.06em;color:var(--ink)}.audit{margin:40px 0 72px}.audit .grid{margin-top:26px}.audit .panel{min-height:210px}.how{margin:24px 0 82px}.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}.how .panel{min-height:205px}.case-study{margin:24px 0 82px}.case-study .grid{margin-top:26px}.case-study h3{margin-bottom:6px}.faq{margin:24px 0 82px}.faq .grid{margin-top:26px}.faq .panel{min-height:190px}.portfolio{margin:24px 0 82px}.sample-report{margin:24px 0 82px}.sample-report .panel{display:flex;gap:28px;align-items:center;justify-content:space-between}.sample-report h2{max-width:620px}@media(max-width:720px){.sample-report .panel{display:block}}@media(max-width:720px){.grid,.how-grid{grid-template-columns:1fr}.hero{padding:72px 0}.dark{padding:28px}}
   </style>
 </head>
 <body><main>
@@ -30,6 +30,12 @@
       <article class="panel step"><b>03 / FIT</b><h3>An honest recommendation</h3><p>I’ll say whether a fixed-scope Shipping Sprint is a fit—or if you can finish the release yourself with the plan.</p></article>
     </div>
   </section>
+  <section class="sample-report">
+    <div class="panel">
+      <div><span class="eyebrow">See the deliverable</span><h2>A sample release-readiness audit</h2><p>See the short, practical report a maker receives after the free audit: release snapshot, clear verdict, top blockers, and an owned release plan.</p></div>
+      <p><a class="cta" href="sample-release-readiness-audit.pdf" download>Download the sample PDF</a></p>
+    </div>
+  </section>
   <section class="how">
     <span class="eyebrow">How it works</span>
     <h2>From first email to final handoff</h2>
@@ -49,6 +55,15 @@
       <article><h3>Starting point</h3><p>A local Swift project with no customer-ready onboarding, release packaging, or documented first-run validation.</p></article>
       <article><h3>Release work completed</h3><p>Added onboarding and privacy copy, prepared beta packaging, and ran a real first-launch smoke test rather than assuming it worked.</p></article>
       <article><h3>Honest release gate</h3><p>Developer ID signing and notarization remain the final external gate. The release path is documented clearly instead of being hand-waved away.</p></article>
+    </div>
+  </section>
+  <section class="portfolio">
+    <span class="eyebrow">Portfolio snapshot</span>
+    <h2>Release engineering that leaves makers in control</h2>
+    <div class="grid">
+      <article class="panel"><h3>Quiet Mac beta</h3><p>Moved a native Mac utility from a developer-only project to onboarding and privacy copy, beta packaging, and a real first-launch smoke test.</p></article>
+      <article class="panel"><h3>Audit before scope</h3><p>Every potential sprint starts with a written release-readiness audit so the actual blockers are visible before any paid work begins.</p></article>
+      <article class="panel"><h3>Fixed scope</h3><p>The $750 sprint focuses on the release finish line: packaging, signing and notarization readiness, distribution, testing, and handoff documentation.</p></article>
     </div>
   </section>
   <section class="faq">
