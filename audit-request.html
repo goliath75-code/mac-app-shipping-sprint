@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a free Mac app release-readiness audit</title>
+  <style>
+    :root{--ink:#111322;--muted:#5d6275;--line:#e4e5ed;--bg:#f7f7fb;--violet:#6951ff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:760px;margin:auto;padding:52px 24px 80px}.eyebrow{color:var(--violet);font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}h1{font-size:clamp(2.5rem,7vw,4.5rem);line-height:.98;letter-spacing:-.065em;margin:12px 0 20px}p{color:var(--muted);font-size:1.1rem}.panel{margin-top:34px;padding:28px;background:#fff;border:1px solid var(--line);border-radius:20px}label{display:block;font-weight:720;margin:18px 0 7px}input,select,textarea{width:100%;padding:12px 14px;border:1px solid #cdd0dc;border-radius:10px;font:inherit;color:var(--ink)}textarea{min-height:110px;resize:vertical}.hint{font-size:.9rem;margin:18px 0}.cta{border:0;padding:14px 20px;border-radius:12px;background:var(--violet);color:#fff;font:inherit;font-weight:760;cursor:pointer}.back{color:var(--violet);font-weight:700;text-decoration:none}
+  </style>
+</head>
+<body><main>
+  <a class="back" href="./">← Mac App Shipping Sprint</a>
+  <p class="eyebrow">Free release-readiness audit</p>
+  <h1>Get a clear path to shipping.</h1>
+  <p>Share the basics below. Your email app will open with a structured request addressed to Dave—nothing is stored on this page.</p>
+  <form class="panel" id="audit-form">
+    <label for="name">Your name</label><input id="name" name="name" required autocomplete="name">
+    <label for="email">Best email</label><input id="email" name="email" type="email" required autocomplete="email">
+    <label for="app">App link or repository</label><input id="app" name="app" type="url" placeholder="https://…" required>
+    <label for="stack">Stack</label><select id="stack" name="stack" required><option value="">Choose one</option><option>Swift / SwiftUI</option><option>Electron</option><option>Tauri</option><option>Python</option><option>Other</option></select>
+    <label for="blocker">Current release blocker</label><textarea id="blocker" name="blocker" required placeholder="What is stopping you from shipping?"></textarea>
+    <label for="date">Target launch date</label><input id="date" name="date" type="date">
+    <p class="hint">You keep control of your Apple account, certificates, keys, and passwords. The audit identifies the next responsible release steps.</p>
+    <button class="cta" type="submit">Create my audit request email</button>
+  </form>
+  <script>
+    document.querySelector('#audit-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const body = [
+        `Name: ${data.get('name')}`,
+        `Best email: ${data.get('email')}`,
+        `App link or repo: ${data.get('app')}`,
+        `Stack: ${data.get('stack')}`,
+        `Current release blocker: ${data.get('blocker')}`,
+        `Target launch date: ${data.get('date') || 'Not set'}`
+      ].join('\n');
+      location.href = `mailto:goliath75@icloud.com?subject=${encodeURIComponent('Mac App Release-Readiness Audit')}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</main></body></html>
